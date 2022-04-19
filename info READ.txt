@@ -1,0 +1,7 @@
+o 장고 프로젝트 생성 후 서버가 정상적으로 구동하는지 확인 : runserver 명령 (서버 중지 ctrl + c)
+    -- python manage.py runserver
+
+※ asgi.py (Asynchronous Server Gateway Interface) : 
+- 웹 서버, 프레임워크, 어플리케이션을 연결해주는 표준 인터페이스
+- 즉, 다양한 서버 및 어플리케이션 프레임워크의 비동기 및 동기 기능의 표준 제공
+
