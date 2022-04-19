@@ -1,3 +1,5 @@
+admin123qwe
+
 o 장고 프로젝트 생성 후 서버가 정상적으로 구동하는지 확인 : runserver 명령 (서버 중지 ctrl + c)
     -- python manage.py runserver
 
@@ -5,3 +7,21 @@ o 장고 프로젝트 생성 후 서버가 정상적으로 구동하는지 확�
 - 웹 서버, 프레임워크, 어플리케이션을 연결해주는 표준 인터페이스
 - 즉, 다양한 서버 및 어플리케이션 프레임워크의 비동기 및 동기 기능의 표준 제공
 
+
+o 기본 DB 생성(sqlite3 db 생성(migrate)) 및 관리자 계정 생성하기
+(sqlite3가 아닌 다른 RDB를 사용할 경우, db셋팅을 먼저 한 후 mirgate 및 createsuperuser 함)
+(venv) C:\Users\haeu\OneDrive\myDev\PyCharm\ogLap1_bookmark>python manage.py migrate
+(venv) C:\Users\haeu\OneDrive\myDev\PyCharm\ogLap1_bookmark>python manage.py createsuperuser
+
+ 
+
+oooooooo bookmark 앱 만들기
+(venv) C:\Users\haeu\OneDrive\myDev\PyCharm\ogLap1_bookmark>python manage.py startapp bookmark
+# bookmark 폴더 내 폴더&파일
+migrations
+__init__.py
+admin.py
+apps.py
+models.py
+tests.py
+views.py
