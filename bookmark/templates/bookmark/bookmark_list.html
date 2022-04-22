@@ -1,0 +1,27 @@
+<div class="btn-group">
+    <!-- urls.py의 name 속성을 템플릿에서 사용 : url 템플릿 태그 "/bookmark/add/"-->
+    <a href="{% url 'add' %}" class="btn btn-info">Add Bookmark</a>
+</div>
+<p></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Site</th>
+            <th scope="col">URL</th>
+            <th scope="col">Modify</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for bookmark in object_list %}  <!-- 규칙 : queryset일 경우 object_list, 1개인 경우 object -->
+            <tr>
+                <td>{{ forloop.counter }}</td>  <!-- number -->
+                <td><a href="{% url 'detail' pk=bookmark.id %}">{{ bookmark.site_name }}</a></td> <!-- bookmark 모델 인스턴스.필드(컬럼)명-->
+                <td><a href="{{ bookmark.url }}" target="_blank">{{ bookmark.url }}</a></td>
+                <td><a href="{% url 'update' pk=bookmark.id %}" class="bnt btn-success btn-sm">Modify</a></td>
+                <td><a href="#" class="bnt btn-danger btn-sm">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
